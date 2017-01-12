@@ -45,11 +45,24 @@ func (this *ClassFile) read(reader *ClassRead) {
 }
 
 func (this *ClassFile) readAndCheckVersion(reader *ClassRead) {
-
+	this.minorVersion = reader.readUint16()
+	this.majorVersion = reader.readUint16()
+	switch this.majorVersion{
+		case 45:
+			return
+		case 46,47,48,49,50,51,52:
+			if this.minorVersion == 0{
+				return
+			}
+	}
+	panic("java.lang.UnsupportedClassVersionError!")
 }
 
 func (this *ClassFile) readAndCheckMagic(reader *ClassRead) {
-
+	magic := reader.readUint32()
+	if magic != 0xCAFEBABE{
+		panic("java.lang.ClassFormatError:magic!")
+	}
 }
 
 func (this *ClassFile) MinorVersion() uint16 {
@@ -61,29 +74,36 @@ func (this *ClassFile) MajorVersion() uint16 {
 }
 
 func (this *ClassFile) ConstantPool() ConstantPool {
-
+	return this.constantPool
 }
 
-func (this *ClassFile)AccessFlags() uint16{
-	
+func (this *ClassFile) AccessFlags() uint16{
+	return this.accessFlags
 }
 
-func (this *ClassFile)Fields() []*MemberInfo(){
-	
+func (this *ClassFile) Fields() []*MemberInfo(){
+	return this.fields
 }
 
 func (this *ClassFile)Methods() []*MemberInfo(){
-	
+	return this.methods
 }
 
 func (this *ClassFile)ClassName() string{
-	
+	return this.constantPool.getClassName(this.thisClass)
 }
 
 func (this *ClassFile)SuperClassName()string{
-	
+	if this.superClass > 0 {
+		return this.constantPool.getClassName(this.superClass)
+	}
+	return ""
 }
 
 func (this *ClassFile)InterfaceNames()[]string{
-	
+	interfaceNames := make([]string,len(this.interfaces))
+	for i,cpIndex := range this.interfaces{
+		interfaceNames[i] = this.constantPool.getClassName(cpIndex)
+	}
+	return interfaceNames
 }
