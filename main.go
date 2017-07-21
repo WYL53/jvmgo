@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"jvmgo/classpath"
+	"github.com/WYL53/jvmgo/classpath"
 )
 
 func main() {
