@@ -27,17 +27,17 @@ func newAttributeInfo(attrName string, attrLen uint32, cp ConstantPool) Attribut
 	case "Code":
 		return &CodeAttribute{cp: cp}
 	case "ConstantValue":
-		return &ConstantValueAttribut{}
+		return &ConstantValueAttribute{}
 	case "Depricated":
-		return &DepricatedAttribute{}
+		return &DeprecatedAttribute{}
 	case "Exceptions":
-		return &ExceptionsAttribut{}
+		return &ExceptionAttribute{}
 	case "LineNumberTable":
 		return &LineNumberTableAttribute{}
-	case "LocalvariableTable":
-		return &LocalvariableTableAttribut{}
+	//case "LocalvariableTable":
+	//	return &LocalvariableTableAttribute{}
 	case "SourceFile":
-		return &SourceFileAttribut{cp: cp}
+		return &SourceFileAttribute{cp: cp}
 	case "Synthetic":
 		return &SyntheticAttribute{}
 	default:

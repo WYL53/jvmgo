@@ -3,6 +3,7 @@ package classfile
 import "fmt"
 
 type ClassFile struct {
+	//magic uint32
 	minorVersion uint16
 	majorVersion uint16
 	constantPool ConstantPool
@@ -40,7 +41,7 @@ func (this *ClassFile) read(reader *ClassReader) {
 	this.superClass = reader.readUint16()
 	this.interfaces = reader.readUint16s()
 	this.fields = readMembers(reader, this.constantPool)
-	this.methods = readMebers(reader, this.constantPool)
+	this.methods = readMembers(reader, this.constantPool)
 	this.attributes = readAttributes(reader, this.constantPool)
 }
 
@@ -97,7 +98,7 @@ func (this *ClassFile) SuperClassName() string {
 	if this.superClass > 0 {
 		return this.constantPool.getClassName(this.superClass)
 	}
-	return ""
+	return "" //只有java.lang.Object才没有超类
 }
 
 func (this *ClassFile) InterfaceNames() []string {

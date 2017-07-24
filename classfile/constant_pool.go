@@ -1,12 +1,15 @@
 package classfile
-
+/*
+	索引是从1开始的
+	CONSTANT_Long_info和CONSTANT_Double_info各占两个位置
+ */
 type ConstantPool []ConstantInfo
 
-func readConstanntPool(reader *ClassReader) ConstantPool {
+func readConstantPool(reader *ClassReader) ConstantPool {
 	cpCount := int(reader.readUint16())
 	cp := make([]ConstantInfo, cpCount)
 	for i := 1; i < cpCount; i++ {
-		cp[i] = readContantInfo(reader, cp)
+		cp[i] = readConstantInfo(reader, cp)
 		switch cp[i].(type) {
 		case *ConstantLongInfo, *ConstantDoubleInfo:
 			i++
@@ -24,7 +27,7 @@ func (this ConstantPool) getConstantInfo(index uint16) ConstantInfo {
 
 func (this ConstantPool) getNameAndType(index uint16) (string, string) {
 	ntInfo := this.getConstantInfo(index).(*ConstantNameAndTypeInfo)
-	name := this.getUtf8(ntInfo.namaIndex)
+	name := this.getUtf8(ntInfo.nameIndex)
 	_type := this.getUtf8(ntInfo.descriptorIndex)
 	return name, _type
 }
@@ -85,14 +88,14 @@ func newConstantInfo(tag uint8, cp ConstantPool) ConstantInfo {
 	case CONSTANT_NameAndType:
 		return &ConstantNameAndTypeInfo{}
 
-	case CONSTANT_MethodType:
-		return &ConstantMethodTypeInfo{}
-
-	case CONSTANT_MethodHandle:
-		return &ConstantMethodHandleInfo{}
-
-	case CONSTANT_InvokeDynamic:
-		return &ConstantInvokeDynamicInfo{}
+	//case CONSTANT_MethodType:
+	//	return &ConstantMethodTypeInfo{}
+	//
+	//case CONSTANT_MethodHandle:
+	//	return &ConstantMethodHandleInfo{}
+	//
+	//case CONSTANT_InvokeDynamic:
+	//	return &ConstantInvokeDynamicInfo{}
 
 	default:
 		panic("java.lang.ClassFormatError:constant poll tag!")

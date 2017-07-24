@@ -1,4 +1,9 @@
 package classfile
+//
+//CONSTANT_ Fieldref_ info 表示 字段 符号 引用，
+//CONSTANT_ Methodref_ info 表示 普通（ 非 接口）方法 符号 引用，
+//CONSTANT_ InterfaceMethodref_ info 表示 接口 方法 符号 引用。
+// 这 三种 常量 结构 一模一样
 
 type ConstantMemberrefInfo struct {
 	cp               ConstantPool

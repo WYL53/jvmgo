@@ -1,5 +1,6 @@
 package classfile
 
+//字段、方法表
 type MemberInfo struct {
 	cp              ConstantPool
 	accessFlags     uint16
@@ -23,7 +24,7 @@ func readMember(reader *ClassReader, cp ConstantPool) *MemberInfo {
 		accessFlags:     reader.readUint16(),
 		nameIndex:       reader.readUint16(),
 		descriptorIndex: reader.readUint16(),
-		attributes:      readAttributes(read, cp),
+		attributes:      readAttributes(reader, cp),
 	}
 }
 

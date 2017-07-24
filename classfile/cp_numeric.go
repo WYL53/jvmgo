@@ -2,11 +2,11 @@ package classfile
 
 import "math"
 
-type ConstantIntergerInfo struct {
+type ConstantIntegerInfo struct {
 	val int32
 }
 
-func (this *ConstantIntergerInfo) readInfo(reader *ClassReader) {
+func (this *ConstantIntegerInfo) readInfo(reader *ClassReader) {
 	bytes := reader.readUint32()
 	this.val = int32(bytes)
 }
