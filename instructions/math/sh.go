@@ -21,7 +21,7 @@ import (
 type ISHL struct {
 	base.NoOperandsInstruction
 }
-func (*ISHL) Executor(frame *rtda.Frame) {
+func (*ISHL) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopInt()
@@ -34,7 +34,7 @@ func (*ISHL) Executor(frame *rtda.Frame) {
 type ISHR struct {
 	base.NoOperandsInstruction
 }
-func (*ISHR) Executor(frame *rtda.Frame) {
+func (*ISHR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopInt()
@@ -48,7 +48,7 @@ func (*ISHR) Executor(frame *rtda.Frame) {
 type IUSHR struct {
 	base.NoOperandsInstruction
 }
-func (*IUSHR) Executor(frame *rtda.Frame) {
+func (*IUSHR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopInt()
@@ -61,7 +61,7 @@ func (*IUSHR) Executor(frame *rtda.Frame) {
 type LSHL struct {
 	base.NoOperandsInstruction
 }
-func (*LSHL) Executor(frame *rtda.Frame) {
+func (*LSHL) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopLong()
@@ -74,7 +74,7 @@ func (*LSHL) Executor(frame *rtda.Frame) {
 type LSHR struct {
 	base.NoOperandsInstruction
 }
-func (*LSHR) Executor(frame *rtda.Frame) {
+func (*LSHR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopLong()
@@ -87,7 +87,7 @@ func (*LSHR) Executor(frame *rtda.Frame) {
 type LUSHR struct {
 	base.NoOperandsInstruction
 }
-func (*LUSHR) Executor(frame *rtda.Frame) {
+func (*LUSHR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopLong()

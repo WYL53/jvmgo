@@ -11,6 +11,9 @@ import (
 // fload 系列 操作 float 变量、 iload 系列 操作 int 变量、 lload 系列 操作 long 变量、
 // xaload 操作 数组。
 
+//iload 指令 的 索引 来自 操作 数，
+//iload_ 1指令索引 隐含 在 操作 码 中
+
 func _iload(frame *rtda.Frame,index uint)  {
 	val := frame.LocalVars().GetInt(index)
 	frame.OperandStack().PushInt(val)
@@ -18,23 +21,23 @@ func _iload(frame *rtda.Frame,index uint)  {
 
 type ILOAD struct {base.Index8Instruction}
 
-func (this *ILOAD) Executor(frame *rtda.Frame) {
+func (this *ILOAD) Execute(frame *rtda.Frame) {
 	_iload(frame,uint(this.Index))
 }
 
 type ILOAD_0 struct {base.NoOperandsInstruction}
-func (this *ILOAD_0) Executor(frame *rtda.Frame) {
+func (this *ILOAD_0) Execute(frame *rtda.Frame) {
 	_iload(frame,0)
 }
 type ILOAD_1 struct {base.NoOperandsInstruction}
-func (this *ILOAD_1) Executor(frame *rtda.Frame) {
+func (this *ILOAD_1) Execute(frame *rtda.Frame) {
 	_iload(frame,1)
 }
 type ILOAD_2 struct {base.NoOperandsInstruction}
-func (this *ILOAD_2) Executor(frame *rtda.Frame) {
+func (this *ILOAD_2) Execute(frame *rtda.Frame) {
 	_iload(frame,2)
 }
 type ILOAD_3 struct {base.NoOperandsInstruction}
-func (this *ILOAD_3) Executor(frame *rtda.Frame) {
+func (this *ILOAD_3) Execute(frame *rtda.Frame) {
 	_iload(frame,3)
 }

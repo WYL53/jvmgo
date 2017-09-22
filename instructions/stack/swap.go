@@ -10,7 +10,7 @@ type SWAP struct {
 	base.NoOperandsInstruction
 }
 
-func (this *SWAP) Executor(frame *rtda.Frame) {
+func (this *SWAP) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	slot1 := stack.PopSlot()
 	slot2 := stack.PopSlot()

@@ -24,7 +24,7 @@ func (this *TABLE_SWITCH) FetchOperands(reader *base.BytecodeReader) {
 	this.jumpOffsets = reader.ReadInt32s(jumpOffsetCount)
 }
 
-func (this *TABLE_SWITCH) Executor(frame *rtda.Frame) {
+func (this *TABLE_SWITCH) Execute(frame *rtda.Frame) {
 	index := frame.OperandStack().PopInt()
 	var offset int
 	if index >= this.low && index <= this.high {

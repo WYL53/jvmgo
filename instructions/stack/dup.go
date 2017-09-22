@@ -12,7 +12,7 @@ type DUP struct {
 	base.NoOperandsInstruction
 }
 
-func (this *DUP) Executor(frame *rtda.Frame) {
+func (this *DUP) Execute(frame *rtda.Frame) {
 	stack:=frame.OperandStack()
 	slot := stack.PopSlot()
 	stack.PushSlot(slot)
@@ -22,7 +22,7 @@ func (this *DUP) Executor(frame *rtda.Frame) {
 type DUP_X1 struct {
 	base.NoOperandsInstruction
 }
-func (this *DUP_X1) Executor(frame *rtda.Frame) {
+func (this *DUP_X1) Execute(frame *rtda.Frame) {
 	stack:=frame.OperandStack()
 	slot1 := stack.PopSlot()
 	slot2 := stack.PopSlot()
@@ -34,7 +34,7 @@ func (this *DUP_X1) Executor(frame *rtda.Frame) {
 type DUP_X2 struct {
 	base.NoOperandsInstruction
 }
-func (this *DUP_X2) Executor(frame *rtda.Frame) {
+func (this *DUP_X2) Execute(frame *rtda.Frame) {
 	stack:=frame.OperandStack()
 	slot1 := stack.PopSlot()
 	slot2 := stack.PopSlot()
@@ -49,7 +49,7 @@ func (this *DUP_X2) Executor(frame *rtda.Frame) {
 type DUP2 struct {
 	base.NoOperandsInstruction
 }
-func (this *DUP2) Executor(frame *rtda.Frame) {
+func (this *DUP2) Execute(frame *rtda.Frame) {
 	stack:=frame.OperandStack()
 	slot1 := stack.PopSlot()
 	slot2 := stack.PopSlot()
@@ -62,7 +62,7 @@ func (this *DUP2) Executor(frame *rtda.Frame) {
 type DUP2_X1 struct {
 	base.NoOperandsInstruction
 }
-func (this *DUP2_X1) Executor(frame *rtda.Frame) {
+func (this *DUP2_X1) Execute(frame *rtda.Frame) {
 	stack:=frame.OperandStack()
 	slot1 := stack.PopSlot()
 	slot2 := stack.PopSlot()
@@ -77,7 +77,7 @@ func (this *DUP2_X1) Executor(frame *rtda.Frame) {
 type DUP2_X2 struct {
 	base.NoOperandsInstruction
 }
-func (this *DUP2_X2) Executor(frame *rtda.Frame) {
+func (this *DUP2_X2) Execute(frame *rtda.Frame) {
 	stack:=frame.OperandStack()
 	slot1 := stack.PopSlot()
 	slot2 := stack.PopSlot()

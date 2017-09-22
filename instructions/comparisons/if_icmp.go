@@ -7,7 +7,7 @@ import (
 
 type IF_ICMPEQ struct{ base.BranchInstruction }
 
-func (this *IF_ICMPEQ) Executor(frame *rtda.Frame) {
+func (this *IF_ICMPEQ) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	val2 := stack.PopInt()
 	val1 := stack.PopInt()
@@ -16,9 +16,9 @@ func (this *IF_ICMPEQ) Executor(frame *rtda.Frame) {
 	}
 }
 
-type IF_ICMPNQ struct{ base.BranchInstruction }
+type IF_ICMPNE struct{ base.BranchInstruction }
 
-func (this *IF_ICMPNQ) Executor(frame *rtda.Frame) {
+func (this *IF_ICMPNE) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	val2 := stack.PopInt()
 	val1 := stack.PopInt()
@@ -29,7 +29,7 @@ func (this *IF_ICMPNQ) Executor(frame *rtda.Frame) {
 
 type IF_ICMPLT struct{ base.BranchInstruction }
 
-func (this *IF_ICMPLT) Executor(frame *rtda.Frame) {
+func (this *IF_ICMPLT) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	val2 := stack.PopInt()
 	val1 := stack.PopInt()
@@ -40,7 +40,7 @@ func (this *IF_ICMPLT) Executor(frame *rtda.Frame) {
 
 type IF_ICMPLE struct{ base.BranchInstruction }
 
-func (this *IF_ICMPLE) Executor(frame *rtda.Frame) {
+func (this *IF_ICMPLE) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	val2 := stack.PopInt()
 	val1 := stack.PopInt()
@@ -51,7 +51,7 @@ func (this *IF_ICMPLE) Executor(frame *rtda.Frame) {
 
 type IF_ICMPGT struct{ base.BranchInstruction }
 
-func (this *IF_ICMPGT) Executor(frame *rtda.Frame) {
+func (this *IF_ICMPGT) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	val2 := stack.PopInt()
 	val1 := stack.PopInt()
@@ -62,7 +62,7 @@ func (this *IF_ICMPGT) Executor(frame *rtda.Frame) {
 
 type IF_ICMPGE struct{ base.BranchInstruction }
 
-func (this *IF_ICMPGE) Executor(frame *rtda.Frame) {
+func (this *IF_ICMPGE) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	val2 := stack.PopInt()
 	val1 := stack.PopInt()

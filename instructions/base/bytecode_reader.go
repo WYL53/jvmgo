@@ -1,8 +1,12 @@
 package base
 
 type BytecodeReader struct {
-	code []byte
-	pc   int
+	code []byte  //存放字节码
+	pc   int	//纪录读到那个字节
+}
+
+func (this *BytecodeReader)PC() int {
+	return this.pc
 }
 
 func (this *BytecodeReader) Reset(code []byte, pc int) {

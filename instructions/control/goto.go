@@ -9,6 +9,6 @@ type GOTO struct {
 	base.BranchInstruction
 }
 
-func (this *GOTO) Executor(frame *rtda.Frame) {
+func (this *GOTO) Execute(frame *rtda.Frame) {
 	base.Branck(frame, this.Offset)
 }

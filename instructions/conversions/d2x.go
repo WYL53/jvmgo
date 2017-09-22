@@ -9,7 +9,7 @@ type D2F struct {
 	base.NoOperandsInstruction
 }
 
-func (*D2F) Executor(frame *rtda.Frame) {
+func (*D2F) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	d := stack.PopDouble()
 	f := float32(d)
@@ -20,7 +20,7 @@ type D2I struct {
 	base.NoOperandsInstruction
 }
 
-func (*D2I) Executor(frame *rtda.Frame) {
+func (*D2I) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	d := stack.PopDouble()
 	i := int32(d)
@@ -31,7 +31,7 @@ type D2L struct {
 	base.NoOperandsInstruction
 }
 
-func (*D2L) Executor(frame *rtda.Frame) {
+func (*D2L) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	d := stack.PopDouble()
 	i := int64(d)

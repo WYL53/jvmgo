@@ -9,7 +9,7 @@ import (
 type DREM struct {
 	base.NoOperandsInstruction
 }
-func (*DREM) Executor(frame *rtda.Frame) {
+func (*DREM) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopDouble()
 	v1 := stack.PopDouble()
@@ -20,7 +20,7 @@ func (*DREM) Executor(frame *rtda.Frame) {
 type FREM struct {
 	base.NoOperandsInstruction
 }
-func (*FREM) Executor(frame *rtda.Frame) {
+func (*FREM) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopFloat()
 	v1 := stack.PopFloat()
@@ -31,7 +31,7 @@ func (*FREM) Executor(frame *rtda.Frame) {
 type IREM struct {
 	base.NoOperandsInstruction
 }
-func (*IREM) Executor(frame *rtda.Frame) {
+func (*IREM) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopInt()
@@ -45,7 +45,7 @@ func (*IREM) Executor(frame *rtda.Frame) {
 type LREM struct {
 	base.NoOperandsInstruction
 }
-func (*LREM) Executor(frame *rtda.Frame) {
+func (*LREM) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopLong()
 	v1 := stack.PopLong()

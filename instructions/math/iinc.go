@@ -15,7 +15,7 @@ func (this *IINC) FetchOperands(reader *base.BytecodeReader) {
 	this.Const = int32(reader.ReadInt8())
 }
 
-func (this *IINC) Executor(frame *rtda.Frame) {
+func (this *IINC) Execute(frame *rtda.Frame) {
 	localVars := frame.LocalVars()
 	val := localVars.GetInt(this.Index)
 	val += this.Const

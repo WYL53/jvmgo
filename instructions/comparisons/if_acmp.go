@@ -11,7 +11,7 @@ type IF_ACMPEQ struct {
 	base.BranchInstruction
 }
 
-func (this *IF_ACMPEQ) Executor(frame *rtda.Frame) {
+func (this *IF_ACMPEQ) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	ref2 := stack.PopRef()
 	ref1 := stack.PopRef()
@@ -20,11 +20,11 @@ func (this *IF_ACMPEQ) Executor(frame *rtda.Frame) {
 	}
 }
 
-type IF_ACMPNQ struct {
+type IF_ACMPNE struct {
 	base.BranchInstruction
 }
 
-func (this *IF_ACMPNQ) Executor(frame *rtda.Frame) {
+func (this *IF_ACMPNE) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	ref2 := stack.PopRef()
 	ref1 := stack.PopRef()

@@ -3,12 +3,13 @@ package base
 import "github.com/WYL53/jvmgo/rtda"
 
 type Instruction interface {
-	FetchOperands(reader *BytecodeReader)
-	Executor(frame *rtda.Frame)
+	FetchOperands(*BytecodeReader)
+	Execute(*rtda.Frame)
 }
 
 type NoOperandsInstruction struct {}
 
+//什么也不读
 func (this *NoOperandsInstruction)FetchOperands(reader *BytecodeReader)  {
 
 }
@@ -27,7 +28,7 @@ type Index8Instruction struct {
 }
 
 func (this *Index8Instruction)FetchOperands(reader *BytecodeReader)  {
-	this.Index = int(reader.ReadInt8())
+	this.Index = uint(reader.ReadInt8())
 }
 
 type Index16Instruction struct {
@@ -35,5 +36,5 @@ type Index16Instruction struct {
 }
 
 func (this *Index16Instruction)FetchOperands(reader *BytecodeReader)  {
-	this.Index = int(reader.ReadInt16())
+	this.Index = uint(reader.ReadInt16())
 }

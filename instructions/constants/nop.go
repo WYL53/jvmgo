@@ -9,6 +9,6 @@ type NOP struct {
 	base.NoOperandsInstruction
 }
 
-func (this *NOP)Executor(frame *rtda.Frame)  {
-
+func (this *NOP)Execute(frame *rtda.Frame)  {
+	//什么也不做
 }

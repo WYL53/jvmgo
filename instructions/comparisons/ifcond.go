@@ -7,7 +7,7 @@ import (
 
 type IFEQ struct{ base.BranchInstruction }
 
-func (this *IFEQ) Executor(frame *rtda.Frame) {
+func (this *IFEQ) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val == 0 {
 		base.Branck(frame, this.Offset)
@@ -16,7 +16,7 @@ func (this *IFEQ) Executor(frame *rtda.Frame) {
 
 type IFNE struct{ base.BranchInstruction }
 
-func (this *IFNE) Executor(frame *rtda.Frame) {
+func (this *IFNE) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val != 0 {
 		base.Branck(frame, this.Offset)
@@ -25,7 +25,7 @@ func (this *IFNE) Executor(frame *rtda.Frame) {
 
 type IFLT struct{ base.BranchInstruction }
 
-func (this *IFLT) Executor(frame *rtda.Frame) {
+func (this *IFLT) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val < 0 {
 		base.Branck(frame, this.Offset)
@@ -34,7 +34,7 @@ func (this *IFLT) Executor(frame *rtda.Frame) {
 
 type IFLE struct{ base.BranchInstruction }
 
-func (this *IFLE) Executor(frame *rtda.Frame) {
+func (this *IFLE) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val <= 0 {
 		base.Branck(frame, this.Offset)
@@ -43,7 +43,7 @@ func (this *IFLE) Executor(frame *rtda.Frame) {
 
 type IFGT struct{ base.BranchInstruction }
 
-func (this *IFGT) Executor(frame *rtda.Frame) {
+func (this *IFGT) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val > 0 {
 		base.Branck(frame, this.Offset)
@@ -52,7 +52,7 @@ func (this *IFGT) Executor(frame *rtda.Frame) {
 
 type IFGE struct{ base.BranchInstruction }
 
-func (this *IFGE) Executor(frame *rtda.Frame) {
+func (this *IFGE) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val >= 0 {
 		base.Branck(frame, this.Offset)

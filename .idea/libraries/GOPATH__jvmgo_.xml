@@ -1,0 +1,83 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;jvmgo&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/upgrader" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/oa" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/security" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/bangongshi" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/helper" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/yanJiuShi" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/res" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/code.1dmy.com" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/odbc" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/github.com" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/atomtree" />
+      <root url="file://$PROJECT_DIR$/../../../quickstart" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/dev.atomtree.cn" />
+      <root url="file://$PROJECT_DIR$/../../../learn_nsq" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/atomlog" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../myBlog" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/special" />
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../beegoBlog" />
+      <root url="file://$PROJECT_DIR$/../../../beegotest" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/datatransform" />
+      <root url="file://$PROJECT_DIR$/../../../20170425" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/faxuehui" />
+      <root url="file://$PROJECT_DIR$/../../../bmob" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/PoliticalDepartment" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/gonggong" />
+      <root url="file://$PROJECT_DIR$/../../../myApi" />
+      <root url="file://$PROJECT_DIR$/../../../vendor" />
+      <root url="file://$PROJECT_DIR$/../../../xiaoHua" />
+      <root url="file://$PROJECT_DIR$/../../../test_goquery" />
+      <root url="file://$PROJECT_DIR$/../../../jd_crawler" />
+      <root url="file://$PROJECT_DIR$/../../../HelloWorld" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/upgrader" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/oa" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/security" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/bangongshi" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/helper" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/yanJiuShi" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/res" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/code.1dmy.com" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/odbc" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/github.com" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/atomtree" />
+      <root url="file://$PROJECT_DIR$/../../../quickstart" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/dev.atomtree.cn" />
+      <root url="file://$PROJECT_DIR$/../../../learn_nsq" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/atomlog" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../myBlog" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/special" />
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../beegoBlog" />
+      <root url="file://$PROJECT_DIR$/../../../beegotest" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/datatransform" />
+      <root url="file://$PROJECT_DIR$/../../../20170425" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/faxuehui" />
+      <root url="file://$PROJECT_DIR$/../../../bmob" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/PoliticalDepartment" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../../zfw/src/gonggong" />
+      <root url="file://$PROJECT_DIR$/../../../myApi" />
+      <root url="file://$PROJECT_DIR$/../../../vendor" />
+      <root url="file://$PROJECT_DIR$/../../../xiaoHua" />
+      <root url="file://$PROJECT_DIR$/../../../test_goquery" />
+      <root url="file://$PROJECT_DIR$/../../../jd_crawler" />
+      <root url="file://$PROJECT_DIR$/../../../HelloWorld" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

@@ -9,7 +9,7 @@ type DCMPG struct {
 	base.NoOperandsInstruction
 }
 
-func (*DCMPG) Executor(frame *rtda.Frame) {
+func (*DCMPG) Execute(frame *rtda.Frame) {
 	_fcmp(frame, true)
 }
 
@@ -17,7 +17,7 @@ type DCMPL struct {
 	base.NoOperandsInstruction
 }
 
-func (*DCMPL) Executor(frame *rtda.Frame) {
+func (*DCMPL) Execute(frame *rtda.Frame) {
 	_fcmp(frame, false)
 }
 

@@ -12,7 +12,7 @@ type FCMPG struct {
 	base.NoOperandsInstruction
 }
 
-func (*FCMPG) Executor(frame *rtda.Frame) {
+func (*FCMPG) Execute(frame *rtda.Frame) {
 	_fcmp(frame, true)
 }
 
@@ -20,7 +20,7 @@ type FCMPL struct {
 	base.NoOperandsInstruction
 }
 
-func (*FCMPL) Executor(frame *rtda.Frame) {
+func (*FCMPL) Execute(frame *rtda.Frame) {
 	_fcmp(frame, false)
 }
 

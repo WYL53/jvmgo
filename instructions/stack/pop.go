@@ -11,14 +11,14 @@ type POP struct {
 	base.NoOperandsInstruction
 }
 
-func (this *POP) Executor(frame *rtda.Frame) {
+func (this *POP) Execute(frame *rtda.Frame) {
 	frame.OperandStack().PopSlot()
 }
 
 type POP2 struct {
 	base.NoOperandsInstruction
 }
-func (this *POP2) Executor(frame *rtda.Frame) {
+func (this *POP2) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	stack.PopSlot()
 	stack.PopSlot()
